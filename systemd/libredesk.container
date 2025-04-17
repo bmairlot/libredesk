@@ -7,7 +7,7 @@ ContainerName=libredesk
 Image=libredesk/libredesk:latest
 EnvironmentFile=env/libredesk.env
 Volume=libredesk-uploads:/libredesk/uploads
-Volume=./config/config.toml:/libredesk/config.toml
+Volume=./config/config.toml:/libredesk/config.toml:Z
 DNS=172.16.0.1
 Pod=libredesk.pod
 
