@@ -5,6 +5,7 @@ Requires=redis.service postgresql.service
 [Container]
 ContainerName=libredesk
 Image=libredesk/libredesk:latest
+Exec=sh -c "./libredesk --install --idempotent-install --yes --config /libredesk/config.toml && ./libredesk --upgrade --yes --config /libredesk/config.toml && ./libredesk --config /libredesk/config.toml"
 EnvironmentFile=env/libredesk.env
 Volume=libredesk-uploads:/libredesk/uploads
 Volume=./config/config.toml:/libredesk/config.toml:Z
