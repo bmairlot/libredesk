@@ -1,5 +1,6 @@
 [Unit]
 Description=Libredesk Pod
+Requires=libredesk-network.service
 
 [Pod]
 PodName=libredesk
