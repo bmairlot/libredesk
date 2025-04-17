@@ -1,0 +1,5 @@
+[Unit]
+Description=Libredesk Configuration Data
+
+[Volume]
+VolumeName=libredesk-config

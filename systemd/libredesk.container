@@ -1,0 +1,15 @@
+[Unit]
+Description=Libredesk application container
+Requires=redis.service postgresql.service
+
+[Container]
+ContainerName=libredesk
+Image=libredesk/libredesk:latest
+EnvironmentFile=env/libredesk.env
+Volume=libredesk-uploads:/libredesk/uploads
+Volume=./config/config.toml:/libredesk/config.toml
+DNS=172.16.0.1
+Pod=libredesk.pod
+
+[Install]
+WantedBy=multi-user.target

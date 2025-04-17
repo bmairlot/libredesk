@@ -1,0 +1,5 @@
+[Unit]
+Description=Libredesk Uploads
+
+[Volume]
+VolumeName=libredesk-uploads
